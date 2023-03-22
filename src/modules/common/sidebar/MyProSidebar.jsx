@@ -8,8 +8,8 @@ import {  Box, Typography, IconButton } from "@mui/material";
 
 import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
+import DevicesIcon from '@mui/icons-material/Devices';
 
-import SpeedIcon from '@mui/icons-material/Speed';
 import { HomeMax } from "@mui/icons-material";
 
 const Item = ({ title, to, icon, selected, setSelected }) => {
@@ -104,7 +104,7 @@ const MyProSidebar = () => {
             <Item
               title="Gadgets"
               to="/"
-              icon={<SpeedIcon />}
+              icon={<DevicesIcon />}
               selected={selected}
               setSelected={setSelected}
             />

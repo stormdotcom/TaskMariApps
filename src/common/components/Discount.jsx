@@ -2,8 +2,9 @@ import React from "react";
 import { Box, Typography } from "@mui/material";
 import { colors } from '../theme/theme';
 import { Grid } from "@mui/material";
-const Rating = ({rating = "0.70", size="60", discountPercentage=0}) => {
+const Discount = ({rating = "0.70", size="60", discountPercentage=0}) => {
   const angle = (discountPercentage/100) * 360;
+  const circleColor =  Number(discountPercentage) > 10 ?  colors.greenAccent[500] : colors.redAccent[500]
   return (
     <Grid sx={{ 
       display:"flex",
@@ -22,7 +23,7 @@ const Rating = ({rating = "0.70", size="60", discountPercentage=0}) => {
         sx={{
             background: `radial-gradient(${colors.primary[100]} 55%, transparent 56%),
                 conic-gradient(transparent 0deg ${angle}deg, ${colors.blueAccent[800]} ${angle}deg 360deg),
-                ${colors.greenAccent[500]}`,
+                ${circleColor}`,
             borderRadius: "50%",
             width: `${size}px`,
             height: `${size}px`,
@@ -44,4 +45,4 @@ const Rating = ({rating = "0.70", size="60", discountPercentage=0}) => {
   );
 };
 
-export default Rating;
+export default Discount;

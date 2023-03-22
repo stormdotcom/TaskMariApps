@@ -1,5 +1,5 @@
 import { Box, Tooltip, Typography } from "@mui/material";
-import Rating from "./Rating";
+import Discount from "./Discount";
 import { colors } from "../theme/theme";
 import ReactStars from "react-rating-stars-component";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
@@ -18,7 +18,7 @@ const ItemCard = ({ title="", brand="", subtitle="", discountPercentage, rating,
           width: 75,
           maxHeight: { xs: 100, md: 80 },
           maxWidth: { xs: 75, md: 63 },
-          border:"10px"
+          borderRadius:"10px"
         }}
         alt={`${subtitle} ${brand}`}
         src={imageUrl}
@@ -47,7 +47,7 @@ const ItemCard = ({ title="", brand="", subtitle="", discountPercentage, rating,
           </Typography>
         </Box>
         <Box>
-          <Rating discountPercentage={discountPercentage} />
+          <Discount discountPercentage={discountPercentage} />
         </Box>
       </Box>
       <Box display="flex" justifyContent="space-between" mt="2px">
