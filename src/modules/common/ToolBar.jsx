@@ -1,5 +1,5 @@
 import React from "react";
-import {  Box, Chip, IconButton, InputBase, Modal, useMediaQuery, useTheme } from "@mui/material";
+import {  Box,  IconButton, InputBase, Modal, useMediaQuery, useTheme } from "@mui/material";
 import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined";
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
@@ -8,7 +8,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import CampaignIcon from '@mui/icons-material/Campaign';
 import DescriptionIcon from '@mui/icons-material/Description';
 import { useProSidebar } from "react-pro-sidebar";
-import { Add, ArrowCircleLeft, Close, CloseOutlined,  Search } from "@mui/icons-material";
+import {  ArrowCircleLeft, Close, CloseOutlined } from "@mui/icons-material";
 import {  colors } from "../../common/theme/theme";
 
 
@@ -55,23 +55,17 @@ const ToolBar = () => {
           display="flex"
           backgroundColor={colors.primary[200]}
           p={0.2}
-          borderColor={colors.blueAccent[300]}
+          borderColor={colors.grey[300]}
           borderRadius={5}
         >
            <IconButton type="button">
             <SearchIcon />
           </IconButton>
-          <InputBase sx={{ ml: 1, flex: 1 }} placeholder="Search" />
+          <InputBase sx={{ ml: 1, flex: 1 }} placeholder="Search Gadgets" />
           <IconButton type="button">
             <Close />
           </IconButton>
         </Box>
-        <Box py={1}>
-            <Chip label="Advanced Search" size="medium" sx={{ bgcolor: colors.blueAccent[100], color: 'white', px:0.5, mx:1, cursor: "pointer" }} 
-             icon={<Search style={{color:colors.primary[100]}} />} /> 
-            <Chip label="Patient" size="medium" sx={{ bgcolor: colors.blueAccent[100], color: 'white', px:0.5, mx:1, cursor: "pointer" }}  
-            icon={<Add style={{color:colors.primary[100]}} />} />          
-             </Box>
       </Box>
       {screenBreak ? 
       <Box>

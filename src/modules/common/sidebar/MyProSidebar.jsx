@@ -7,19 +7,12 @@ import { Link } from "react-router-dom";
 import { colors } from "../../../common/theme/theme";
 import {  Box, Typography, IconButton } from "@mui/material";
 
-import ContactsOutlinedIcon from "@mui/icons-material/ContactsOutlined";
-import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
 import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
-import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
-import PersonIcon from '@mui/icons-material/Person';
+
 import SpeedIcon from '@mui/icons-material/Speed';
-import ShieldIcon from '@mui/icons-material/Shield';
-import LocalPharmacyIcon from '@mui/icons-material/LocalPharmacy';
-import MedicationIcon from '@mui/icons-material/Medication';
-import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
-import MasksIcon from '@mui/icons-material/Masks';
-import PaymentIcon from '@mui/icons-material/Payment';
+import { HomeMax } from "@mui/icons-material";
+
 
 const Item = ({ title, to, icon, selected, setSelected }) => {
 
@@ -64,7 +57,7 @@ const MyProSidebar = () => {
         },
         "& .menu-item:hover": {
           color: `${colors.blueAccent[500]} !important`,
-          backgroundColor: `${colors.blueAccent[100]} !important`,
+          backgroundColor: `${colors.blueAccent[700]} !important`,
         },
         "& .menu-item.active": {
           color: "#000",
@@ -95,9 +88,10 @@ const MyProSidebar = () => {
                 alignItems="center"
                 ml="15px"
               >
-                <Typography variant="h3" color={colors.grey[900]}>
-                  Product Name
-                </Typography>
+                <Typography variant="h3">
+                Gadgets Hub
+                </Typography> 
+                <HomeMax fontSize={"large"} />
                 <IconButton
                   onClick={
                     broken ? () => toggleSidebar() : () => collapseSidebar()
@@ -110,93 +104,9 @@ const MyProSidebar = () => {
           </MenuItem>
           <Box paddingLeft={collapsed ? undefined : "10%"}>
             <Item
-              title="Dashboard"
+              title="Gadgets"
               to="/"
               icon={<SpeedIcon />}
-              selected={selected}
-              setSelected={setSelected}
-            />
-            <Item
-              title="Info"
-              to="/customers-info"
-              icon={<PersonIcon />}
-              selected={selected}
-              setSelected={setSelected}
-            />
-            <Item
-              title="Customers"
-              to="/customers"
-              icon={<ContactsOutlinedIcon />}
-              selected={selected}
-              setSelected={setSelected}
-            />
-            <Item
-              title="Shield"
-              to="/security"
-              icon={<ShieldIcon />}
-              selected={selected}
-              setSelected={setSelected}
-            />
-            <Item
-              title="Emergency"
-              to="/emergency"
-              icon={<LocalPharmacyIcon />}
-              selected={selected}
-              setSelected={setSelected}
-            />
-            <Item
-              title="Medical Kit"
-              to="/medic"
-              icon={<MedicationIcon />}
-              selected={selected}
-              setSelected={setSelected}
-            />
-            <Item
-              title="Calender"
-              to="/calender"
-              icon={<CalendarMonthIcon />}
-              selected={selected}
-              setSelected={setSelected}
-            />
-            <Item
-              title="Hospital"
-              to="/hospital"
-              icon={<MasksIcon />}
-              selected={selected}
-              setSelected={setSelected}
-            />
-            <Item
-              title="Payment"
-              to="/payment"
-              icon={<PaymentIcon />}
-              selected={selected}
-              setSelected={setSelected}
-            />
-            <Item
-              title="Help"
-              to="/line"
-              icon={<HelpOutlineOutlinedIcon />}
-              selected={selected}
-              setSelected={setSelected}
-            />
-            <Item
-              title="Map"
-              to="/map"
-              icon={<MapOutlinedIcon />}
-              selected={selected}
-              setSelected={setSelected}
-            />
-             <Item
-              title="Speed"
-              to="/speed"
-              icon={<SpeedIcon />}
-              selected={selected}
-              setSelected={setSelected}
-            />
-            <Item
-              title="Ask"
-              to="/ask"
-              icon={<HelpOutlineOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />

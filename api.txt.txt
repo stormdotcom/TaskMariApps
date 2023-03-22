@@ -1,1 +1,1 @@
-fetch("https://dummyjson.com/products")
+"https://dummyjson.com/products"

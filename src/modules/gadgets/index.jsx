@@ -31,7 +31,7 @@ const DashBoard = () => {
         alignItems={smScreen ? "center" : "start"}
         m="10px 0"
       >
-        <Header title="Equipo" subtitle="workshop" />
+        <Header title="Gadgets List" subtitle="Get all the trending stuff." />
 
         <Box>
         </Box>

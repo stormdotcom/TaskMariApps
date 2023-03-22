@@ -4,7 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import { ProSidebarWrapper } from "./modules/common/sidebar/ProSidebarWrapper";
 
 import ToolBar from "./modules/common/ToolBar";
-import Dashboard from "./modules/dashboard";
+import Dashboard from "./modules/gadgets";
 import Footer from "./modules/common/Footer";
 
 
