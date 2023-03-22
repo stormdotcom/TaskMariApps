@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Menu, Sidebar, MenuItem } from "react-pro-sidebar";
 import { useProSidebar } from "react-pro-sidebar";
 
-
 import { Link } from "react-router-dom";
 import { colors } from "../../../common/theme/theme";
 import {  Box, Typography, IconButton } from "@mui/material";
@@ -12,7 +11,6 @@ import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 
 import SpeedIcon from '@mui/icons-material/Speed';
 import { HomeMax } from "@mui/icons-material";
-
 
 const Item = ({ title, to, icon, selected, setSelected }) => {
 

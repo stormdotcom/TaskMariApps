@@ -1,25 +1,30 @@
+import { useEffect, useState } from "react";
 import {
   Box,
   useTheme,
   useMediaQuery,
+  Grid
 } from "@mui/material";
-import Grid from "@mui/material/Unstable_Grid2";
+
+
 import { colors } from "../../common/theme/theme";
 import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid';
 import Header from "../../common/components/Header";
 import ItemCard from "../../common/components/ItemCard";
-import { useEffect, useState } from "react";
+
 
 
 const DashBoard = () => {
   const theme = useTheme();
   const smScreen = useMediaQuery(theme.breakpoints.up("sm"));
   const [items, setItems] = useState([])
+
   useEffect(()=>{
     fetch("https://dummyjson.com/products")
     .then((res)=> res.json())
     .then((data)=> setItems(data.products))
   }, [])
+
   return (
     <Box m="20px">
       <Box
@@ -30,7 +35,6 @@ const DashBoard = () => {
         m="10px 0"
       >
         <Header title="Gadgets List" subtitle="Get all the trending stuff." />
-
         <Box>
         </Box>
       </Box>

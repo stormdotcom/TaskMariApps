@@ -1,7 +1,6 @@
 import { Box, Tooltip, Typography } from "@mui/material";
 import Rating from "./Rating";
 import { colors } from "../theme/theme";
-import { Image } from "@mui/icons-material";
 import ReactStars from "react-rating-stars-component";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
