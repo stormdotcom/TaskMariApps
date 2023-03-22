@@ -1,9 +1,9 @@
-import { Box } from '@mui/material'
 import React from 'react'
-
+import { Box } from '@mui/material'
+import HomeMaxIcon from '@mui/icons-material/HomeMax';
 import ContentBody from '../../common/components/ContentBody'
 import { colors } from '../../common/theme/theme'
-import HomeMaxIcon from '@mui/icons-material/HomeMax';
+
 
 const style = {
     backgroundColor: colors.primary[100],
@@ -17,7 +17,6 @@ const Footer = () => {
   
   return (
     <>
-
        <Box sx={style} >
     <Box sx={{marginLeft: "259px", display:"flex", justifyContent:"space-between"}}>
         <Box>
