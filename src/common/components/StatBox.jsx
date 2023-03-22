@@ -1,15 +1,16 @@
 import { Box, Typography } from "@mui/material";
 import ProgressCircle from "./ProgressCircle";
 import { colors } from "../theme/theme";
+import { Image } from "@mui/icons-material";
 
-const StatBox = ({ title, subtitle, progress, increase, icon }) => {
+const StatBox = ({ title, subtitle, progress, increase, icon, imageUrl="" }) => {
     const value = Number(increase)
 
   return (
     <Box width="100%" m="0 30px" p="12px 0">
       <Box display="flex" justifyContent="space-between">
         <Box>
-          {icon}
+         {imageUrl ? <Image />  : icon}
           <Typography
             variant="h4"
             fontWeight="bold"
