@@ -4,7 +4,7 @@ import { colors } from "../theme/theme";
 import ReactStars from "react-rating-stars-component";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
-const ItemCard = ({ title="", brand="", subtitle="", discountPercentage, rating, icon, imageUrl="", description="" }) => {
+const ItemCard = ({ title="", brand="", subtitle="", discountPercentage, rating, icon, imageUrl="", description="", price="" }) => {
     const value = Number(rating)
 
   return (
@@ -29,6 +29,13 @@ const ItemCard = ({ title="", brand="", subtitle="", discountPercentage, rating,
             sx={{ color: colors.grey[100] }}
           >
             {title}
+          </Typography>
+          <Typography
+            variant="h5"
+            fontWeight="bold"
+            sx={{ color: colors.redAccent[500] }}
+          >
+            {`$ ${price}`}
           </Typography>
           <Typography
             variant="p"

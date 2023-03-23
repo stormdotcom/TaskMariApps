@@ -41,14 +41,22 @@ const DashBoard = () => {
 
       <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3, lg:4 }}>
         {items.map((item)=>{
-          return  <Grid xs={12} sm={12} md={6} lg={4} xl={4}>
+          return  <Grid item xs={12} sm={12} md={6} lg={4} xl={4}>
           <Box
             width="100%"
             backgroundColor={colors.primary[100]}
             display="flex"
             alignItems="center"
             justifyContent="center"
-            sx={{borderRadius: "5px", boxShadow: `${colors.grey[800]} 0px 3px 8px`}}
+            sx={{
+              borderRadius: "5px", 
+              boxShadow: `${colors.grey[800]} 0px 3px 8px`,
+              transition:"transform 300ms ease-out",
+              "&:hover": {
+                backgroundColor:colors.primary[200],
+                cursor:"pointer",
+                transform:"scale(1.05)"
+              }}}
           >
             <ItemCard
               title={item.title}
