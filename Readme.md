@@ -7,7 +7,7 @@
 - MUI v5
 - React dom router
 
-#Link 
+# Hosted Link 
 [gadgetshub](https://gadgetshub.netlify.app/)
 
 ![image](https://user-images.githubusercontent.com/84835379/227106020-7d00d724-dbfc-4690-ac95-84d5224fff79.png)
